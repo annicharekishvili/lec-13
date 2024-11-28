@@ -1,0 +1,31 @@
+@mixin box($bg-color: coral) {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: $bg-color;
+}
+
+@mixin container($width: 1100px, $bg-color: aquamarine) {
+  max-width: $width;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $bg-color;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+@mixin flexContainer($align-items, $justify: center) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify;
+}
+
+@mixin button($bg-color: blue) {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: $bg-color;
+  color: white;
+  margin: 0 5px;
+}

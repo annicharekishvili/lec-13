@@ -1,0 +1,45 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+.sec1 {
+  @include container;
+  @include flexContainer($align-items: center, $justify: space-between);
+
+  .box:first-child {
+    @include box($bg-color: $main-color);
+  }
+
+  .box:nth-child(2) {
+    @include box($bg-color: $secondary-color);
+  }
+
+  .box:last-child {
+    @include box;
+  }
+}
+
+.sec2 {
+  @include container($width: 1000px, $bg-color: lightgreen);
+  @include flexContainer($justify: space-around);
+  .box {
+    @include box;
+  }
+}
+
+.sec3 {
+  @include container($width: 500px);
+  @include flexContainer;
+
+  button {
+    &:first-child {
+      @include button;
+    }
+    &:nth-child(2) {
+      @include button($bg-color: red);
+    }
+    &:last-child {
+      @include button($bg-color: grey);
+    }
+  }
+}
